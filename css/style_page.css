@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+.russo-one-regular {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 1rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+  }
+:root{
+    --main-color: #d90429;
+    --text-color: #020102;
+    --bg-color: #fff;
+}
+img{
+    width: 100%;
+}
+body{
+    color: var(--text-color);
+    background-repeat: no-repeat;
+    background-color: #242424;
+}
+#search_btn{
+    cursor: pointer;
+}
+.slider{
+    position: relative;
+    width: 1903px;
+    height: 200%;
+    margin: auto;
+    overflow: hidden;
+    left: -8px;
+    top: -8px;
+}
+.slide_left{
+    position: absolute;
+    cursor: pointer;
+    height: 80px;
+    width: 40px;
+    top: 600px;
+    left: 48px;
+    opacity: 0.5;
+}
+.slide_right{
+    position: absolute;
+    cursor: pointer;
+    height: 80px;
+    width: 40px;
+    top: 500px;
+    left: 1832px;
+    opacity: 0.5;
+}
+.slides img{
+    width: 100%;
+    display: none;
+}
+.slide.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+.btn_slider{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    top: 600px;
+}
+.slide_left:hover{
+    opacity: 1;
+}
+.slide_right:hover{
+    opacity: 1;
+}
+.slide_left{
+    left: 48px;
+    top: -100px;
+}
+.slide_right{
+    right: 0;
+    top: -100px;
+}
+@keyframes fade{
+    from {opacity: .5}
+    to {opacity: 1}
+}
+.container{
+    max-width: 1920px;
+}
+header{
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    padding: 24px 72px;
+}
+#merc-logo{
+    font-size: 72px;
+    cursor: pointer;
+    color: var(--bg-color);
+    
+}
+#map-icon{
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--bg-color);
+    position: absolute;
+    left: 1823px;
+    top: 48px;
+}
+#phone-icon{
+    font-size: 27px;
+    cursor: pointer;
+    color: var(--bg-color);
+    position: absolute;
+    left: 1770px;
+    top: 46px;
+}
+@keyframes Opacity{
+    0%{
+        opacyti: 90%;
+    }
+    50%{
+        opacity: 40%;
+    }
+    100%{
+        opacyti: 90%;
+    }
+}
+.header .nav .search-icon{
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--bg-color);
+    position: absolute;
+    left: 1718px;
+    pointer-events: fill;
+    transition: all 0.5s ease-in-out;
+    top: 49px;
+}
+.header.close-searh-icon .search-icon{
+    opacity: 0;
+    pointer-events: none;
+}
+.header .nav .close-icon{
+    position: absolute;
+    font-size: 36px;
+    right: 157px;
+    cursor: pointer;
+    color: var(--bg-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+    top: 42px;
+}
+.header.close-close-icon .close-icon{
+    opacity: 1;
+    pointer-events: fill;
+}
+#search-icon2{
+    position: absolute;
+    right: 310px;
+    top: 48px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+
+}
+.navbar{
+    font-family: "Russo One", sans-serif;
+    display: flex;
+    column-gap: 48px;
+    list-style-type: none;
+    justify-content: flex-start;
+    padding-left: 72px;
+    justify-content: space-between;
+}
+.navbar a{
+    color: var(--bg-color);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    position: absolute;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 48px;
+    right: 250px;
+    height: 24px;
+    width: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+.header.openSearch .search-form{
+    width: 163.5px; 
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.header .search{
+    position: absolute;
+    display: flex;
+    font-size: 24px;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+}
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+
+    border-radius: 5px;
+    padding: 0 15px 0 30px;
+}
+.contact .arrow-down{
+    position: absolute;
+    width: 80px;
+    height: 72px;
+    left: 920px;
+    top: 960px;
+    animation: Opacity 2s infinite;
+    display: flex;
+
+}
+.footer{
+    display: block;
+    width: 100%;
+    height: 144px;
+    position: absolute;
+    left: 0;
+    top: 2250px;
+}
+.wrapper.openAbout .footer{
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+.about_bg{
+    position: absolute;
+    width: 1416px;
+    height: 1080px;
+    top: -0.5px;
+    right: 0px;
+    z-index: 150;
+}
+.about_left{
+    position: absolute;
+    width: 504px;
+    height: 1080px;
+    top: -0.5px;
+    left: 0px;
+    z-index: 150;
+}
+.stories_img{
+    position: absolute;
+    top: 288px;
+    left: 144px;
+    width: 306px;
+    height: 24px;
+    z-index: 150;
+    cursor: pointer;
+}
+.news_img{
+    position: absolute;
+    top: 216px;
+    left: 144px;
+    width: 306px;
+    height: 24px;
+    z-index: 150;
+    cursor: pointer;
+}
+#closeAbout{
+    z-index: 150;
+    position: absolute;
+    font-size: 48px;
+    color: white;
+    top: 120px;
+    left: 24px;
+    cursor: pointer;
+}
+.about{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+.header.openAbout .about{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.5s ease-in-out;
+    z-index: 150;
+}
+.header.openAbout #merc-logo{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.5s ease-in-out;
+    z-index: 160;
+    font-size: 64px;
+    top: 24px;
+    transform: translate(-57px,0px);
+    -webkit-transform: translate(-57px,0px);
+    -o-transform: translate(-57px,0px);
+    -moz-transform: translate(-57px,0px);
+    position: absolute;
+}
+.about_btn{
+    display: block;
+    left: 400px;
+    top: 48px;
+}
+.catalog_btn{
+    display: block;
+    left: 230px;
+    top: 48px;
+}
+.toContacts{
+    left: 600px;
+    top: 48px;
+}
+.all_img{
+    position: absolute;
+    cursor: pointer;
+    top: 216px;
+    left: 144px;
+    width: 306px;
+    height: 28px;
+    z-index: 150;
+}
+.sedan_img{
+    position: absolute;
+    cursor: pointer;
+    top: 288px;
+    left: 144px;
+    width: 306px;
+    height: 29px;
+    z-index: 150;
+}
+.cupe_img{
+    position: absolute;
+    cursor: pointer;
+    top: 360px;
+    left: 144px;
+    width: 306px;
+    height: 24px;
+    z-index: 150;
+}
+.vnedor_img{
+    position: absolute;
+    cursor: pointer;
+    top: 432px;
+    left: 144px;
+    width: 306px;
+    height: 27px;
+    z-index: 150;
+}
+.catalog_menu{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+.header.openCatalog .catalog_menu{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.5s ease-in-out;
+    z-index: 250;
+}
+.catalog_bg{
+    position: absolute;
+    width: 1416px;
+    height: 1080px;
+    top: -0.5px;
+    right: 0px;
+    z-index: 120;
+}
+.header.openCatalog #merc-logo{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.5s ease-in-out;
+    z-index: 260;
+    font-size: 64px;
+    top: 24px;
+    transform: translate(-57px,0px);
+    -webkit-transform: translate(-57px,0px);
+    -o-transform: translate(-57px,0px);
+    -moz-transform: translate(-57px,0px);
+    position: absolute;
+}
+.catalog_right{
+    position: absolute;
+    width: 408px;
+    height: 1080px;
+    top: -0.5px;
+    left: 487px;
+}
+.sedan_e_img{
+    position: absolute;
+    top: 288px;
+    left: 555px;
+    width: 306px;
+    height: 27px;
+    z-index: 270;
+    cursor: pointer;
+}
+.sedan_s_img{
+    position: absolute;
+    top: 216px;
+    left: 555px;
+    width: 306px;
+    height: 27px;
+    z-index: 270;
+    cursor: pointer;
+}
+.sedan_menu{
+    position: absolute;
+    left: -391px;
+    top: -0.5px;
+    z-index: 140;
+}
+.cupe_menu{
+    position: absolute;
+    left: -391px;
+    top: -0.5px;
+    z-index: 140;
+}
+.vnedor_menu{
+    position: absolute;
+    left: -391px;
+    top: -0.5px;
+    z-index: 140;
+}
+.vned_g_img{
+    position: absolute;
+    top: 285px;
+    left: 555px;
+    width: 303px;
+    height: 72px;
+    z-index: 270;
+    cursor: pointer;
+}
+
+.header.open_sedan .sedan_menu{
+    left: 0px;
+    transition: all 1s ease-in-out;
+}
+.header.open_cupe .cupe_menu{
+    left: 0px;
+    transition: all 1s ease-in-out;
+}
+.header.open_vn .vnedor_menu{
+    left: 0px;
+    transition: all 1s ease-in-out;
+}
+.call{
+    display: none;
+    opacity: 1;
+}
+header.openCall .call{
+    display: block;
+    opacity: 1;
+}
+.blur_img{
+    position: absolute;
+    z-index: 200;
+    backdrop-filter: blur(10px);
+    left: -0.5px;
+    top: 0px;
+    height: 1080.5px;
+}
+.form_img{
+    position: absolute;
+    left: 576px;
+    top: 312px;
+    width: 768px;
+    height: 456px;
+    z-index: 201;
+}
+.btn_img{
+    position: absolute;
+    left: 864px;
+    top: 672px;
+    width: 192px;
+    height: 48px;
+    z-index: 202;
+    cursor: pointer;
+}
+.close-icon-call{
+    z-index: 202;
+    position: absolute;
+    font-size: 24px;
+    color: #5F5F5F;
+    top: 336px;
+    left: 1296px;
+    cursor: pointer;
+}
+.name{
+    position: absolute;
+    z-index: 205;
+    background-color: #E2E2E2;
+    top: 552px;
+    left: 648px;
+    height: 48px;
+    width: 264px;
+    border-radius: 8px;
+}
+.phone{
+    position: absolute;
+    z-index: 205;
+    background-color: #E2E2E2;
+    top: 552px;
+    left: 1008px;
+    height: 48px;
+    width: 264px;
+    border-radius: 8px;
+}
+#nameBox{
+    position: absolute;
+    z-index: 306;
+    background: transparent;
+    border: none;
+    top: 552px;
+    left: 660px;
+    height: 48px;
+    width: 240px;
+    font-size: 20px;
+    outline:none;
+}
+#phoneBox{
+    position: absolute;
+    z-index: 306;
+    background: transparent;
+    border: none;
+    top: 552px;
+    left: 1020px;
+    height: 48px;
+    width: 240px;
+    font-size: 20px;
+    outline:none;
+}
+.carr{
+    position: absolute;
+    top: 1128px;
+    left: 96px;
+    height: 480px;
+    width: 864px;
+}
+.carr1{
+    position: absolute;
+    top: 1200px;
+    left: 1008px;
+    height: 264px;
+    width: 720px;
+}
+.car_btn_1{
+    position: absolute;
+    top: 1507px;
+    left: 1008px;
+    height: 36px;
+    width: 264px;
+}
+.cr1{
+    position: absolute;
+    height: 720px;
+    width: 960px;
+}
+.cr2{
+    position: absolute;
+    height: 720px;
+    width: 942px;
+}
+.cr_btn{
+    position: absolute;
+    cursor: pointer;
+    height: 34px;
+    width: 264px;
+    left: 348px;
+    top: 642px;
+}
+.smth1{
+    position: absolute;
+    top: 1656px;
+    left: 0px;
+}
+.smth2{
+    position: absolute;
+    top: 1656px;
+    left: 960px;
+}
+.smth3{
+    position: absolute;
+    top: 2376px;
+    left: 0px;
+}
+.smth4{
+    position: absolute;
+    top: 2376px;
+    left: 960px;
+}
+.map{
+    z-index: 400;
+    display: none;
+}
+.head{
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+}
+header.show_head{
+    background-image:url(img/heeead.png);
+    top: 0px;
+}
+.page{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+.page1{
+    position: absolute;
+    width: 100%;
+    height: 528px;
+    left: 0px;
+    top: 0px;
+}
+.pageText{
+    position: absolute;
+    width: 925px;
+    height: 24px;
+    left: 144px;
+    top: 600px;
+}
+.page2{
+    position: absolute;
+    width: 1632px;
+    height: 383px;
+    left: 144px;
+    top: 648px;
+}
+.page3{
+    position: absolute;
+    width: 100%;
+    height: 360px;
+    left: 0px;
+    top: 1080px;
+}
+.page4{
+    position: absolute;
+    width: 432px;
+    height: 552px;
+    left: 264px;
+    top: 1512px;
+}
+.page5{
+    position: absolute;
+    width: 432px;
+    height: 552px;
+    left: 744px;
+    top: 1512px;
+}
+.page6{
+    position: absolute;
+    width: 432px;
+    height: 552px;
+    left: 1224px;
+    top: 1512px;
+}
+.pageBTN{
+    position: absolute;
+    cursor: pointer;
+    width: 432px;
+    height: 72px;
+    left: 744px;
+    top: 2136px;
+}

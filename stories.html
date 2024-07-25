@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story</title>
+    <link rel="stylesheet" href="css/style_news.css">
+    <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header" id="heeead">
+            <div class="nav">
+                <a href="index.html"><iconify-icon icon="cbi:mercedes" id="merc-logo" ></iconify-icon></a>
+                <ul class="navbar">
+                    <li> <a href="javascript:void(0);" class="catalog_btn" onclick="openCatalogPanel()">Каталог</a></li>
+                    <li> <a href="javascript:void(0);" class="about_btn" onclick="openAboutPanel()">О компании</a></li>
+                    <li> <a href="javascript:void(0);"  class="toContacts" onclick="scrollToButtom()">Контакты</a></li>
+                </ul>
+                
+                <iconify-icon icon="fe:search" class="search-icon" id="searchIcon"></iconify-icon>
+                <iconify-icon icon="flowbite:phone-outline" class="phoneIcon" id="phone-icon" onclick="openCall()"></iconify-icon>
+                <a href="map.html"><iconify-icon icon="bx:map" id="map-icon"></iconify-icon> </a>
+                <iconify-icon icon="iconamoon:close" class="close-icon" id="searchClose"></iconify-icon>
+            </div>
+            <div class="search-form">
+                <input type="text" id="searhBox" placeholder="Введите слова для поиска">
+                <iconify-icon icon="fe:search" class="search" onclick="changePage()"  ></iconify-icon>
+            </div>
+            <main class="about">
+                <img src="css/img/about_bg.jpg" class="about_bg" alt="">
+                <img src="css/img/about_left.jpg" class="about_left" alt="">
+                <a href="news.html"> <img src="css/img/news.png" class="news_img" alt=""></a>
+                <a href="stories.html"></a><img src="css/img/stories.png" class="stories_img" alt=""></a>
+                <iconify-icon icon="simple-line-icons:close" id="closeAbout"  onclick="closeAboutPanel()"></iconify-icon>
+            </main>
+            <main class="catalog_menu">
+                <img src="css/img/catalog_bg.jpg" class="catalog_bg" alt="">
+                <img src="css/img/catalog_left.jpg" class="about_left" alt="">
+                <img src="css/img/all.png" href="javascript:void(0);" class="all_img" alt="" onclick="allInCatalog()" >
+                <img src="css/img/sedan.png" href="javascript:void(0);" class="sedan_img" alt="" onclick="sedanCatalog()">
+                <img src="css/img/cupe.png" class="cupe_img" alt=""  onclick="cupeCatalog()">
+                <img src="css/img/vnedor.png" class="vnedor_img" alt="" onclick="vnCatalog()">
+                <iconify-icon icon="simple-line-icons:close" id="closeAbout"  onclick="closeCatalogPanel()"></iconify-icon>
+                <div class="sedan_menu">
+                    <img src="css/img/catalor_right.jpg" class="catalog_right" alt="">
+                    <img src="css/img/s-class.png" class="sedan_s_img" alt="" onclick="SInCatalog()">
+                    <img src="css/img/e-class.png" class="sedan_e_img" alt="" onclick="EInCatalog()">
+                </div>
+                <div class="cupe_menu">
+                    <img src="css/img/catalor_right.jpg" class="catalog_right" alt="">
+                    <img src="css/img/gle.png" class="sedan_s_img" alt="" onclick="GLEInCatalog()">
+                </div>
+                <div class="vnedor_menu">
+                    <img src="css/img/catalor_right.jpg" class="catalog_right" alt="">
+                    <img src="css/img/glb.png" class="vned_g_img" alt="" onclick="GLBInCatalog()">
+                    <img src="css/img/g-class.png" class="sedan_s_img" alt="" onclick="GInCatalog()">
+                </div>
+            </main>
+            <footer class="call">
+                <img src="css/img/blur2.png" class="blur_img" alt="">
+                <img src="css/img/form.png" class="form_img" alt="">
+                <img src="css/img/btn.png" class="btn_img" alt="" onclick="closeCall()">
+                <iconify-icon icon="simple-line-icons:close" class="close-icon-call" onclick="closeCall()"></iconify-icon>
+                <div class="name"></div>
+                <input type="text" maxlength="20" id="nameBox" placeholder="Введите имя">
+                <div class="phone"></div>
+                <input type="text" id="phoneBox" placeholder="Введите телефон">
+            </footer>
+        </header>
+        <main class="all_stories">
+            <img src="css/img/st_bg.jpg" class="st_bg" alt="">
+            <p class="mers"> mercedes-benz </p>
+            <p class="mers_2"> АО «Мерседес-Бенц PУC» основано в 2002 году.<br>
+                Основное направление деятельности: продажа, послепродажное<br> обслуживание и гарантийная поддержка легковых и коммерческих<br> автомобилей. </p>
+            <div class="first">
+                <img src="css/img/1.jpg" class="st_img" alt="">
+                <p class="msg"> AO «Мерседес-Бенц PУC»<br> представляет логотип </p>
+                <img src="css/img/txt1.png" class="txt_img" alt="">
+            </div>
+            <div class="second">
+                <img src="css/img/2.jpg" class="st_img" alt="">
+                <p class="msg"> Уникальные привилегии <br> при покупке автомобилей </p>
+                <img src="css/img/txt2.png" class="txt_img" alt="">
+            </div>
+            <div class="three">
+                <img src="css/img/3.jpg" class="st_img" alt="">
+                <p class="msg"> Мерседес-Бенц РУС  <br> с ГК АВТОДОМ представляет </p>
+                <img src="css/img/txt3.png" class="txt_img" alt="">
+            </div>
+            <div class="four">
+                <img src="css/img/4.jpg" class="st_img" alt="">
+                <p class="msg"> Работа в компании   <br> Мерседес-Бенц РУС </p>
+                <img src="css/img/txt4.png" class="txt_img" alt="">
+            </div>
+            <div class="five">
+                <img src="css/img/5.jpg" class="st_img" alt="">
+                <p class="msg"> Открытие главного офиса <br> и собственного автосалона </p>
+                <img src="css/img/txt5.png" class="txt_img" alt="">
+            </div>
+            </main>
+        <footer class="footer">
+            <img src="css/img/footer.png" alt="">
+        </footer>
+        <script src="main.js" defer></script>
+        <script src="https://unpkg.com/imask"></script>
+    </div>
+</body>
+</html>
